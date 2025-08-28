@@ -8,8 +8,7 @@ employeesRouter.get("/", (req, res) => {
   res.json(employees);
 });
 
-// GET /employees/random - returns a random employee
-// Note: This route must come BEFORE /:id to avoid "random" being treated as an ID
+
 employeesRouter.get("/random", (req, res) => {
   const randomIndex = Math.floor(Math.random() * employees.length);
   res.json(employees[randomIndex]);
